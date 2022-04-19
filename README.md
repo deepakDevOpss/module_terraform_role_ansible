@@ -41,7 +41,8 @@ su - ${USER}
 
 sudo usermod -aG docker ${USER}
 
-</ul>```
+```
+</ul>
 
 
 
