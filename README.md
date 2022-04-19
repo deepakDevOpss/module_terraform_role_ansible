@@ -1,6 +1,6 @@
 # module_terraform_role_ansible
 
-<h2> This will help you to install required prerequisites and how to create infrastructure using these modules </h2>
+<h2> This will help you to install prerequisites and how to create infrastructure using these modules </h2>
 
 <h3> Install prerequisites </h3>
 
