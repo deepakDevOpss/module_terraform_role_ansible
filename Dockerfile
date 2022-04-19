@@ -10,6 +10,6 @@ RUN apk add --no-cache python3 py3-pip
 
 WORKDIR /root
 
-RUN pip3 install -r requirements.txt
-
 COPY Terraform_Code .
+
+RUN pip3 install -r requirements.txt
