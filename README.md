@@ -5,7 +5,7 @@
 <h3> Install prerequisites </h3>
 
 <ul>
-<li> The build-essentials packages are meta-packages that are necessary for compiling software. They include the GNU debugger, g++/GNU compiler collection,      and some more tools and libraries that are required to compile a program.</li>
+<li> The build-essentials packages are meta-packages that are necessary for compiling software. They include the GNU debugger, g++/GNU compiler collection,and some more tools and libraries that are required to compile a program.</li>
 
 ```
 sudo apt-get update 
@@ -14,7 +14,7 @@ sudo apt-get install build-essential
 
 ```
 
-<li> Docker is an application that simplifies the process of managing application processes in containers. Containers let you run your applications in          resource-isolated processes. </li>
+<li> Docker is an application that simplifies the process of managing application processes in containers. Containers let you run your applications in  resource-isolated processes. </li>
 
 ```
 sudo apt update
@@ -52,8 +52,7 @@ sudo usermod -aG docker ${USER}
   
   ```
   make modify_var_file
-  ```
-  
+  ``` 
   which wll move the file in the Terraform_Code folder.</li>
   
 <li> We have to build the Dockerfile</li>
@@ -72,6 +71,20 @@ sudo usermod -aG docker ${USER}
   
   ```
   make apply_terraform
+  ```
+</ul>
+
+<ul>
+<li> Defining variables at runtime(Ansible)</li>
+  
+  ```
+  ansible-playbook site.yml --extra-vars "version=1.23.45 other_variable=foo"
+  ```
+ 
+<li> Ansible runs or skips all role with tags that match the tags you pass at the command line</li>
+  
+  ```
+  ansible-playbook site.yaml --tags "nodejs"
   ```
 </ul>
 
