@@ -4,7 +4,7 @@ output "vpc_id" {
 
 output "vpc_cidr_block" {
   description = "The CIDR block of the VPC"
-  value = join("", aws_vpc.vpc.*.cidr_block)
+  value       = join("", aws_vpc.vpc.*.cidr_block)
 }
 
 output "public_subnet_id" {

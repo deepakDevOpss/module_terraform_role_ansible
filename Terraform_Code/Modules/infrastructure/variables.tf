@@ -59,11 +59,11 @@ variable "rds_instance_identifier" {
 }
 
 variable "storage_type" {
-  type        = string
+  type = string
 }
 
 variable "instance_class" {
-  type        = string
+  type = string
 }
 
 
