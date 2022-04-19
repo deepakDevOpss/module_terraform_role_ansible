@@ -1,17 +1,22 @@
 # module_terraform_role_ansible
   This repository contains two folder 
-	1 - Ansible Roles
-	    - mongodb
-			- nginx
-			- nodejs
-			- php
-	2 - Terraform Modules
-			- ec2
-			- key-pair
-			- networking
-			- rds
-			- s3
-			- security groups
+  	<ol>
+	<li>Ansible Roles</li>
+	    <ol>
+	    <li>mongodb</li>
+	    <li>nginx</li>
+	    <li>nodejs</li>
+	    <li>php</li>
+            </ol>
+         <li>Terraform Modules</li>
+	     <ol>
+             <li>ec2</li>
+	     <li>key-pair</li>
+	     <li>networking</li>
+             <li>rds</li>
+	     <li>s3</li>
+	     <li>security groups</li>
+	</ol>
 
 This repository also contain Dockerfile and Makefile, so that we do not face any problem while using when we use this modules and roles.
 
