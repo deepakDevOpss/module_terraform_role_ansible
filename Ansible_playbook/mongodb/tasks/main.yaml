@@ -1,0 +1,26 @@
+---
+- name: MongoDB - Import public key
+  apt_key:
+    keyserver: hkp://keyserver.ubuntu.com:80
+    id: EA312927
+ 
+- name: MongoDB - Add repository
+  apt_repository:
+    filename: '/etc/apt/sources.list.d/mongodb-org-{{ version }}.list'
+    repo: 'deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/{{ version }} multiverse'
+
+- name: Update apt repo and cache on all Debian/Ubuntu boxes
+  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+- name: Upgrade all packages on servers
+  apt: upgrade=dist force_apt_get=yes
+
+ 
+- name: MongoDB - Install MongoDB
+  apt:
+    name: mongodb-org
+ 
+- name: MongoDB - Running state
+  service:
+    name: mongod
+    state: started
