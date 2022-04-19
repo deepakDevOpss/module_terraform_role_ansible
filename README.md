@@ -44,6 +44,7 @@ sudo usermod -aG docker ${USER}
 ```
   
 <li> Install Ansible</li>
+  
   ```
   sudo apt update
   sudo apt install software-properties-common
