@@ -1,6 +1,6 @@
 # module_terraform_role_ansible
 
-This repository contains two folders
+Folder Structure
   	<ol>
 	<li>Ansible Roles</li>
 	    <ol>
@@ -19,7 +19,7 @@ This repository contains two folders
 	     <li>security groups</li>
 	</ol>
 
-This repository also contain Dockerfile and Makefile, so that we do not face any problem while using when we use this modules and roles.
+This repository also contain Dockerfile and Makefile, so that we do not face any problem while using this modules and roles.
 
 If we have to pass the parameter while running the role we can easily pass it
 
