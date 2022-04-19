@@ -1,4 +1,10 @@
 ---
+- name: Run apt upgrade
+  apt:
+    upgrade: "yes"
+    update_cache: yes
+    cache_valid_time: 432000
+
 - name: install other packages
   apt: name={{item}} state=present
   with_items:
@@ -6,12 +12,18 @@
     - build-essential
     - git
 
-- name: Install nodejs
-  shell: curl -sL https://deb.nodesource.com/{{node_version}} | sudo -E bash -
-  ignore_errors: True
+- name: Install the gpg key for nodejs LTS
+  apt_key:
+    url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+    state: present
 
-- name: install nodejs
-  apt: name={{item}} state=present
-  with_items:
-    - nodejs
-    - npm
+- name: Install the nodejs LTS repos
+  apt_repository:
+    repo: "deb https://deb.nodesource.com/node_{{ NODEJS_VERSION }}.x {{ ansible_distribution_release }} main"
+    state: present
+    update_cache: "yes"
+
+- name: Install the nodejs
+  apt:
+    name: nodejs
+    state: present
