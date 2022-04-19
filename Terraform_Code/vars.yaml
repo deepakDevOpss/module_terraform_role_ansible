@@ -1,0 +1,49 @@
+environment: dev
+
+owner: devops
+
+#vpc variables
+
+vpc_cidr: 10.0.0.0/16
+
+public_subnets_cidr:
+  - 10.0.1.0/24
+  - 10.0.2.0/24
+
+private_subnets_cidr:
+  - 10.0.3.0/24
+  - 10.0.4.0/24
+
+#security group variables
+
+sg_name: ssh_group 
+
+#key-pair variables
+
+key_name: Deepak
+
+#s3 variables
+
+bucket_name: deepakbucket
+
+#instance relates variables
+
+instance_type: t2.micro
+
+ami: ami-0d73480446600f555
+
+Name: deepak
+
+#rds variables
+
+rdsusername: admin
+
+rdspasswd: admin12345
+
+rdsdbname: mysqldb
+
+rds_instance_identifier: database
+
+storage_type: gp2
+
+instance_class: db.t2.micro
