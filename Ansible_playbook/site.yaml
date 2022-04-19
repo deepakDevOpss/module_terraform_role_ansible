@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+  - import_role:
+      name: php
+    tags:
+    - php
+
+  - import_role:
+      name: nodejs
+    tags:
+    - nodejs
+
+  - import_role:
+      name: mongodb
+    tags:
+    - mongodb
+
