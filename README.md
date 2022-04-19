@@ -17,4 +17,6 @@ This repository also contain Dockerfile and Makefile, so that we do not face any
 
 If we have to pass the parameter while running the role we can easily pass it
 
+```
 command - ansible-playbook site.yaml --extra-vars "name=value"
+```
