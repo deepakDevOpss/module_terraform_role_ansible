@@ -13,4 +13,4 @@ move_var_file:
 
 apply_terraform:
 	make move_var_file
-	docker exec -i modules bash -c "python3 move_var_file/terraform-wrraper.py"
+	docker exec -i modules sh -c "python3 move_var_file/terraform-wrraper.py"
