@@ -2,7 +2,7 @@ modify_var_file:
 	mv var.yaml Terraform_Code
 
 build:
-	docker build -t terraform_modules .
+	docker build -f Dockerfile.Terraform -t terraform_modules .
 
 run:
 	docker rm -f modules || true
