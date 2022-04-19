@@ -8,9 +8,8 @@ run:
 	docker rm -f modules || true
 	docker run -itd --name modules -v ~/.aws:/root/.aws terraform_modules
 
-move_var_file:
-	mv vars.yaml terraform_modules
-
 apply_terraform:
-	make move_var_file
-	docker exec -i modules sh -c "python3 move_var_file/terraform-wrraper.py"
+	docker exec -i modules sh -c "python3 terraform-wrraper.py"
+
+destroy_infra:
+    docker exec -i modules sh -c "terraform destroy --auto-approve"
