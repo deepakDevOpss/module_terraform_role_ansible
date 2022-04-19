@@ -2,7 +2,7 @@
 
 <h2> This will help you to install required prerequisites and how to create infrastructure using these modules </h2>
 
-<h3> install prerequisites </h3>
+<h3> Install prerequisites </h3>
 
 <ul>
 <li> The build-essentials packages are meta-packages that are necessary for compiling software. They include the GNU debugger, g++/GNU compiler collection,      and some more tools and libraries that are required to compile a program.</li>
@@ -42,6 +42,37 @@ su - ${USER}
 sudo usermod -aG docker ${USER}
 
 ```
+</ul>
+
+<h3> how to use </h3>
+<ul>
+<li> The vars.yaml file has to be modify first(contains terraform variables)</li>
+  
+<li> Then after this command has to be run 
+  
+  ```
+  make modify_var_file
+  ```
+  
+  which wll move the file in the Terraform_Code folder.</li>
+  
+<li> We have to build the Dockerfile</li>
+  
+  ```
+  make build_terraform
+  ```
+  
+<li> To run the container we have to use this command</li>
+  
+  ```
+  make run_terraform
+  ```
+  
+<li> To create infrastructure we have to run this command</li>
+  
+  ```
+  make apply_terraform
+  ```
 </ul>
 
 
