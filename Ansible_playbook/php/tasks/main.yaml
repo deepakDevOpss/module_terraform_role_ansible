@@ -1,0 +1,17 @@
+---
+- name: apt update
+  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+- name: Install php packages
+  apt:
+    name:
+    - php{{ php_version }}-cli
+    - php{{ php_version }}-curl
+    - php{{ php_version }}-fpm
+    - php{{ php_version }}-mysql
+    - php{{ php_version }}-bcmath
+    - php{{ php_version }}-mbstring
+    - php{{ php_version }}-tokenizer
+    - php{{ php_version }}-xml
+    - php{{ php_version }}-json
+    - php{{ php_version }}-zip
